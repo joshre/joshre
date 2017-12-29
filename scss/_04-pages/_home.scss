@@ -1,0 +1,58 @@
+.featured {
+    time {
+        float: right;
+    }
+
+    .deet-wrap {
+        margin-top: 0.5em;
+    }
+
+    .title {
+        font-weight: 600;
+        width: 75%;
+        display: block;
+        float: left;
+    }
+
+    .type {
+        font-weight: 400;
+        clear: both;
+    }
+
+    &.two {
+        @include span-columns(11 of 12);
+
+        @include shift(0.5);
+
+        margin-bottom: 1em;
+
+        @include media(min-width $screen-md) {
+            @include span-columns(6);
+
+            @include shift(0);
+
+            margin-bottom: 0;
+        }
+    }
+
+    &.three {
+        @include span-columns(11 of 12);
+
+        @include shift(0.5);
+
+        @include media(min-width $screen-md) {
+            @include span-columns(4);
+
+            @include shift(0);
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+.home-bg {
+    float: left;
+    width: 100%;
+}

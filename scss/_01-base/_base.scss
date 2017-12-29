@@ -1,0 +1,21 @@
+body {
+    background-color: #fafafa;
+}
+
+img {
+    max-width: 100%;
+}
+
+.site-header {
+    h2 {
+        margin-bottom: 0;
+
+        // color: map-get($blue, links);
+   
+    }
+
+    .outer {
+        padding-top: 2em !important;
+        padding-bottom: 0em !important;
+    }
+}

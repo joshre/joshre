@@ -1,0 +1,19 @@
+// ------------------------------------------------------------
+// Neat grid using Omega Reset
+// ------------------------------------------------------------
+@mixin omega-reset($nth) {
+    &:nth-child(#{$nth}) {
+        margin-right: flex-gutter();
+    }
+
+    &:nth-child(#{$nth}+1) {
+        clear: none;
+    }
+}
+
+@mixin gradient-text($color1, $color2) {
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(45deg, $color1, $color2);
+}
