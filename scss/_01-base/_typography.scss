@@ -153,6 +153,7 @@ strong, b {
 // `margin-bottom` to maintain vertical rhythm
 p, blockquote, pre, ul, ol, dl, dir, figure, article, menu, %vertical-rhythm {
     margin: $spacing-unit auto;
+    display: block;
 }
 
 main {
