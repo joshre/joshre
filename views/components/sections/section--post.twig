@@ -1,16 +1,15 @@
-{% extends "base.twig" %}
-{% block content %}
+
 	<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
 		<section class="flex flex--wrap max-wrap margin--center justify--between">
 			<div class="grid--one grid--sm-four-fifths grid--md-three-fourths grid--lg-two-thirds bg--white spacing--gutter spacing--vert-1 spacing--dsk-vert-2">
-				<h1 class="article-h1">{{post.title}}</h1>
-				<br>
-				<time class="font--bold font--tiny">{{ post.post_date|date}}</time>
-				{{post.content}}
+				<h2 class="article-h1"><a href="{{post.link}}" class="color--text">{{post.title}}</a></h2>
+
+				<time class=" font--tiny">{{ post.post_date|date}}</time>
+				{{post.content}}<br><br>
+				<a href="{{post.link}}" class="button ">View Post </a>
 			</div>
 		</section>
 		
 		{# If you want comments #}
 		{# {% include 'components/comments.twig' %} #}
 	</article>
-{% endblock %}

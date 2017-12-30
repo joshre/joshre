@@ -4,10 +4,10 @@
 		<section class="flex flex--wrap max-wrap margin--center justify--between">
 			<div class="grid--one grid--sm-four-fifths grid--md-three-fourths grid--lg-two-thirds  spacing--gutter spacing--vert-1 spacing--dsk-vert-2">
 				<h1 class="article-h1">{{post.title}}</h1>
-			</div><div class="grid--one grid--sm-four-fifths grid--md-three-fourths grid--lg-two-thirds bg--white spacing--gutter spacing--vert-1 spacing--dsk-vert-2">
-			{{post.content}}
-		</div>
-	</div>
-</section>
-</article>
+			</div>
+		</section>
+	</article>
+	{% for post in posts %}
+		{% include 'components/sections/section--post.twig' %}
+	{% endfor %}
 {% endblock %}

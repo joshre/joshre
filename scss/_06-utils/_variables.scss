@@ -44,6 +44,7 @@ $gr:1.610833;
 $grid:1;
 $spacing-unit: (1em * $grid);
 $small-spacing: ($spacing-unit / 2);
+
 //
 // Media Queries & Breakpoints
 // 
@@ -68,8 +69,10 @@ $screen-xs-max:              ($screen-xs - 1) !default;
 $screen-sm-max:              ($screen-sm - 1) !default;
 $screen-md-max:              ($screen-md - 1) !default;
 $screen-lg-max:              ($screen-lg - 1) !default;
+$screen-xl-max:              ($screen-xl - 1) !default;
 
 $max-xs:  new-breakpoint(max-width $screen-xs-max 12);
 $max-sm: new-breakpoint(max-width $screen-sm-max 12);
 $max-md:  new-breakpoint(max-width $screen-md-max  6);
 $max-lg:  new-breakpoint(max-width $screen-lg-max  6);
+$max-xl:  new-breakpoint(max-width $screen-xl-max  6);

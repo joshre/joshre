@@ -82,6 +82,7 @@ function getSinglePost($posttype = null)
         'post_type'  => $posttype,
         'image'      => $attachedimage,
         'link'       => get_permalink(),
+        'content'    => get_the_content(),
     );
 
     // Restores original Post Data
