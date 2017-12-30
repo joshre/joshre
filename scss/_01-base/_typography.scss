@@ -17,7 +17,7 @@ body {
     font-family: $heading-font-family;
     font-weight: $heading-font-weight;
     color: $heading-font-color;
-
+display: block;
     &.section-title {
         line-height: 2.5;
     }
@@ -265,5 +265,5 @@ h4 + ul {
 
 ul {
     list-style-type: square;
-    margin: 0.5em auto 1em 1.5em;
+    margin: 0.5em auto 1em 1.5em ;
 }
