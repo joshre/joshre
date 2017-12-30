@@ -13,6 +13,6 @@
 .lead-paragraph, h1, b {
     @include gradient-text($second-accent, lighten($dark-large, 10%));
 
-    display: inline-block;
+
 }
 
