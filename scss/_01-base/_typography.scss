@@ -1,7 +1,6 @@
 body {
     font-family: $base-sans-font;
     line-height: 1.6;
-
     font-size: $base-font-size;
 
     @include media($screen-sm-max) {
@@ -164,8 +163,7 @@ a {
     color: $base-link-color;
     text-decoration: none;
     border-bottom: 1px solid transparent;
-
-    transition:border 0.2s $base-animation;
+    transition: border 0.2s $base-animation;
 
     &:hover {
         border-bottom: 1px solid;
@@ -246,8 +244,7 @@ hr {
 .wf-inactive, .wf-active {
     h1, h2, h3, h4, h5, h6, p, ul, ol {
         opacity: 1;
-
-        transition:opacity 100ms $base-animation;
+        transition: opacity 100ms $base-animation;
     }
 }
 
@@ -264,4 +261,9 @@ hr {
 
 h4 + ul {
     margin-top: 0.5em;
+}
+
+ul {
+    list-style-type: square;
+    margin: 0.5em auto 1em 1.5em;
 }
