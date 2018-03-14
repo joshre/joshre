@@ -26,6 +26,9 @@ $months: (feb: #42A64E, march: #F66D6B, april: #f1c40f, may: #7b8994, june: #E8E
             }
         }
 
+.bigfoot-footnote__button {
+    background-color: rgba($value, $button-standard-opacity);
+}
         .site-header {
             background-image: linear-gradient($value, darken($value, 4%));
         }
