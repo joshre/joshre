@@ -19,16 +19,14 @@ $gray: (
 	light: #7b8994,
 	lightest: #E8EDF2,
 );
-$accent: (
-	main: #f3f3f3,
-);
-$pink: (
-	main: #fc3476,
-);
 
-$accent-color: map-get($accent, main);
-$second-accent: map-get($blue, links);
-$dark-large: map-get($blue, gray);
+
+
+$black:					#1a2432;
+
+
+
+
 
 // -----------------------------------------------------------------------------
 // Social Icons

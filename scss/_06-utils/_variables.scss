@@ -1,37 +1,38 @@
 
 
-$default-font: "Source Sans Pro", sans-serif;
+$default-font: "Affogato", sans-serif;
 
 $base-serif-font:$default-font;
 $base-sans-font:$default-font;
 $heading-font-family:$default-font;
 
 $heading-font-weight: 300;
-$base-font-weight: 300;
+$base-font-weight: 400;
 
 $max-width: (
 	xs: 480px,
 	sm: 768px,
 	md: 992px,
+	mdl: 1080px,
 	lg: 1200px,
 	xl: 1640px
 );
 
 
 
-$base-font-color:darken(map-get($blue, dark), 10%);
-$heading-font-color: darken(map-get($blue, dark), 10%);
-$base-font-size: 1rem;
-$base-padding: 1em;
+$base-font-color:			$black;
+$heading-font-color: 		$black;
+$base-font-size:			1rem;
+$base-padding:				1em;
 
-$link-colors: map-get($blue, links);
-$link-color: $link-colors;
-$base-border-radius: 8px;
-$base-text-shadow: 0 1px 4px rgba(26, 36, 50, 0.3);;
 
-$base-animation: cubic-bezier(0.4, 0.01, 0.165, 0.99);
 
-$max-wrap:1080px;
+$base-border-radius: 		8px;
+$base-text-shadow: 			0 1px 4px rgba(26, 36, 50, 0.3);;
+
+$base-animation: 			cubic-bezier(0.4, 0.01, 0.165, 0.99);
+
+$max-wrap:					1080px;
 
 
 $base-border: 1px solid $base-border-color;
@@ -58,6 +59,8 @@ $screen-sm:                  map-get($max-width, sm) !default;
 // Medium screen / desktop
 $screen-md:                  map-get($max-width, md) !default;
 
+$screen-mdl:                  map-get($max-width, mdl) !default;
+
 // Large screen / wide desktop
 $screen-lg:                  map-get($max-width, lg) !default;
 
@@ -68,11 +71,13 @@ $screen-xl:                  map-get($max-width, xl) !default;
 $screen-xs-max:              ($screen-xs - 1) !default;
 $screen-sm-max:              ($screen-sm - 1) !default;
 $screen-md-max:              ($screen-md - 1) !default;
+$screen-mdl-max:              ($screen-mdl + 1) !default;
 $screen-lg-max:              ($screen-lg - 1) !default;
 $screen-xl-max:              ($screen-xl - 1) !default;
 
 $max-xs:  new-breakpoint(max-width $screen-xs-max 12);
 $max-sm: new-breakpoint(max-width $screen-sm-max 12);
 $max-md:  new-breakpoint(max-width $screen-md-max  6);
+$max-mdl:  new-breakpoint(max-width $screen-mdl-max  6);
 $max-lg:  new-breakpoint(max-width $screen-lg-max  6);
 $max-xl:  new-breakpoint(max-width $screen-xl-max  6);

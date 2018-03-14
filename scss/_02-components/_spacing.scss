@@ -32,15 +32,6 @@
 	.spacing--dsk-horiz-6{padding-left:6em * $grid; padding-right: 6em * $grid;}
 }
 
-.spacing--gutter {
-	padding-right: 1.7em * $grid;
-	padding-left: 1.7em * $grid;
-
-    @include media($screen-sm) {
-	padding-right: 3em * $grid;
-	padding-left: 3em * $grid;
-    }
-}
 .spacing--mob-bot-1{@include media($max-sm){padding-bottom: 1em * $grid;}}
 .spacing--mob-bot-2{@include media($max-sm){padding-bottom: 2em * $grid;}}
 .spacing--mob-bot-3{@include media($max-sm){padding-bottom: 3em * $grid;}}
@@ -50,25 +41,44 @@
 .spacing--bot-2{padding-bottom: 2em * $grid;}
 .spacing--bot-3{padding-bottom: 3em * $grid;}
 .spacing--bot-4{padding-bottom: 4em * $grid;}
+.spacing--gutter {
+    padding-right: 0.7em * $grid;
+    padding-left: 0.7em * $grid;
 
-.spacing--gutter-dsk {
+    @include media($screen-xs) {
+        padding-right: 1.7em * $grid;
+        padding-left: 1.7em * $grid;
+    }
 
-	@include media($screen-sm){
-	padding-right: .7em * $grid;
-	padding-left: .7em * $grid;
-}
 
     @include media($screen-sm) {
-	padding-right: 3em * $grid;
-	padding-left: 3em * $grid;
+        padding-right: 3em * $grid;
+        padding-left: 3em * $grid;
+    }
+}
+
+.spacing--gutter-dsk {
+    @include media($screen-sm) {
+        padding-right: 1.7em * $grid;
+        padding-left: 1.7em * $grid;
+    }
+
+
+    @include media($screen-sm) {
+        padding-right: 3em * $grid;
+        padding-left: 3em * $grid;
     }
 }
 
 .spacing--gutter-mob {
-	@include media($max-sm){
-	padding-right: .7em * $grid;
-	padding-left: .7em * $grid;
-}
+    @include media($max-sm) {
+        padding-right: 1.7em * $grid;
+        padding-left: 1.7em * $grid;
+    }
 
- 
+
+    @include media($max-xs) {
+        padding-right: 0.7em * $grid;
+        padding-left: 0.7em * $grid;
+    }
 }

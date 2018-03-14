@@ -1,15 +1,15 @@
-
-	<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
-		<section class="flex flex--wrap max-wrap margin--center justify--between">
-			<div class="grid--one grid--sm-four-fifths grid--md-three-fourths grid--lg-two-thirds bg--white spacing--gutter spacing--vert-1 spacing--dsk-vert-2">
-				<h2 class="article-h1"><a href="{{post.link}}" class="color--text">{{post.title}}</a></h2>
-
-				<time class="font--bold font--tiny">{{ post.date|date}}</time><br>
-				{{post.content}}<br>
-				<a href="{{post.link}}" class="button ">View Post </a>
-			</div>
-		</section>
+<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+	<section class="flex flex--wrap max-wrap margin--center justify--between">
+		<div class="grid--one grid--sm-four-fifths grid--md-three-fourths grid--lg-two-thirds bg--white spacing--gutter spacing--vert-1 spacing--dsk-vert-2 {% if loop.index > 1 %}{% else %}block--intro{% endif %}">
+		<h2 class="article-h1"><a href="{{post.link}}" class="color--text">{{post.title}}</a></h2>
+		<time class="font--bold font--tiny">{{ post.date|date}}</time><br>
+		{{post.content}}<br>
+		{% if fn('is_single') %}
+			<a href="{{site.url}}/been-making" class="button "><span class="grad"><span class="back">🔙</span> Been Making</span></a>
+		{% else %}
+<a href="{{post.link}}" class="button">View Post </a>
+		{% endif %}
 		
-		{# If you want comments #}
-		{# {% include 'components/comments.twig' %} #}
-	</article>
+	</div>
+</section>
+</article>

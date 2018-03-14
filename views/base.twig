@@ -4,7 +4,7 @@
 	{% endblock %}
 </head>
 {% endblock %}
-<body class="{{body_class}}" data-template="base.twig">
+<body class="{{body_class}} {{"now"|date("F")|lower}}" data-template="base.twig">
 
 	{% block header %}
 		{# <a class="hdr-logo-link" href="/" rel="home">{{site.name}}</a> #}

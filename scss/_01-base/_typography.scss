@@ -17,7 +17,8 @@ body {
     font-family: $heading-font-family;
     font-weight: $heading-font-weight;
     color: $heading-font-color;
-display: block;
+    display: block;
+
     &.section-title {
         line-height: 2.5;
     }
@@ -33,10 +34,11 @@ h1, h2 {
     word-spacing: -0.03em;
     margin-top: 2.5rem;
     margin-bottom: 1rem;
-    font-weight: 100;
+    font-weight: 500;
 }
 
 h2 {
+    
     margin-top: 3rem;
 }
 
@@ -58,7 +60,7 @@ h1 {
 }
 
 h2 {
-    font-size: 1.2 * $base-font-size;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 
@@ -160,17 +162,6 @@ main {
     font-size: 1.3em;
 }
 
-a {
-    color: $base-link-color;
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: border 0.2s $base-animation;
-
-    &:hover {
-        border-bottom: 1px solid;
-    }
-}
-
 code, kbd, samp, tt {
     font-family: monospace;
 }
@@ -266,5 +257,11 @@ h4 + ul {
 
 ul {
     list-style-type: square;
-    margin: 0.5em auto 1em 1.5em ;
+    margin: 0.5em auto 1em 1.5em;
+}
+
+.emoji {
+    background-image: none !important;
+    background-clip: none !important;
+    -webkit-text-fill-color: white !important;
 }

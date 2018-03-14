@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600italic,600,300italic);
+
 @import
   '_07-vendors/bourbon/bourbon',
   '_07-vendors/neat/neat';
@@ -24,6 +24,7 @@
 @import
   '_02-components/bg--color',
   '_02-components/bigfoot',
+  '_02-components/block--intro',
   '_02-components/buttons',
   '_02-components/color',
   '_02-components/display',
@@ -32,6 +33,7 @@
   '_02-components/grid',
   '_02-components/icons',
   '_02-components/margin',
+  '_02-components/months',
   '_02-components/spacing';
 
 @import

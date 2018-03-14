@@ -1,18 +1,15 @@
-.color--white{
-	color: white;
-}
-.color--gray-light{
-	color: map-get($gray, light);
-}
-.color--gray-lightest{
-	color: map-get($gray, lightest);
-}
-.color--text{
-	color: $base-font-color;
-}
-.lead-paragraph, h1, b {
-    @include gradient-text($second-accent, lighten($dark-large, 10%));
-
-
+.color--white {
+    color: white;
 }
 
+.color--gray-light {
+    color: map-get($gray, light);
+}
+
+.color--gray-lightest {
+    color: map-get($gray, lightest);
+}
+
+.color--text {
+    color: $base-font-color;
+}

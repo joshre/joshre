@@ -2,8 +2,8 @@
 {% block content %}
 	<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
 		<section class="flex flex--wrap max-wrap margin--center justify--between">
-			<div class="grid--one grid--sm-four-fifths grid--md-three-fourths grid--lg-two-thirds bg--white spacing--gutter spacing--vert-1 spacing--dsk-vert-2">
-				<p class="lead-paragraph">{{home.intro|striptags}}</p>
+			<div class="block--intro grid--one grid--sm-four-fifths grid--md-three-fourths grid--lg-two-thirds bg--white spacing--gutter spacing--vert-1 spacing--dsk-vert-2">
+				<div class="lead-paragraph">{{home.intro}}</div>
 				<div>{{home.content}}</div>
 			</div>
 		</section>

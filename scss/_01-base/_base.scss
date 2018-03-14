@@ -1,5 +1,5 @@
 body {
-    background-color: #fafafa;
+    background-color: #F3F3F3;
 }
 
 img {
@@ -17,5 +17,19 @@ img {
     .outer {
         padding-top: 2em !important;
         padding-bottom: 0em !important;
+    }
+}
+
+main.content-wrapper, .block--header-wrap {
+    @include media(new-breakpoint(max-width 1180px 6)) {
+        padding-left: 2.3em;
+
+        // position: relative;
+        // width: calc(100vw - 2.3em);
+    }
+
+
+    @include media($max-sm) {
+        padding-left: 0;
     }
 }

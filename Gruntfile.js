@@ -48,18 +48,43 @@ module.exports = function(grunt) {
                 }
             }
         },
-        // postcss: {
-        //     options: {
-        //         processors: [
-        //             require('postcss-font-magician')({
-        //                 hosted: '../fonts/'
-        //             })
-        //         ]
-        //     },
-        //     dist: {
-        //         src: '<%= conf.app %>/main.min.css'
-        //     }
-        // },
+        postcss: {
+            options: {
+                processors: [
+                    require('postcss-font-magician')({
+                        custom: {
+                            'Affogato': {
+                                variants: {
+                                    normal: {
+                                        400: {
+                                            url: {
+                                                woff2: 'fonts/affogato.woff2',
+                                                woff: 'fonts/affogato.woff',
+                                                eot: 'fonts/affogato.eot',
+                                                svg: 'fonts/affogato.svg'
+                                            }
+                                        },
+                                        600: {
+                                            url: {
+                                                woff2: 'fonts/affogato-bold.woff2',
+                                                woff: 'fonts/affogato-bold.woff',
+                                                eot: 'fonts/affogato-bold.eot',
+                                                svg: 'fonts/affogato-bold.svg'
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    })
+                ]
+            },
+               dist: {
+                files: {
+                    '<%= conf.app %>/main.min.css': '<%= conf.app %>/main.min.css'
+                }
+            }
+        },
         watch: {
             twig: {
                 files: '**/*.twig',
@@ -80,7 +105,7 @@ module.exports = function(grunt) {
             },
             cssnano: {
                 files: ["<%= conf.sass %>"],
-                tasks: ["cssnano"]
+                tasks: ["cssnano", "postcss"]
             },
             svgmin: {
                 files: ["<%= conf.iconts %>/*.svg"],
