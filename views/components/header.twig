@@ -1,6 +1,7 @@
 <header class="site-header break making-header block--header-wrap">
 	<div class="max-wrap margin--center spacing--gutter-mob">
+		{{title|print_r}}
 		<a href="{{site.url}}" class="font--no-deco"><h2 class="mar-no color--white">Josh Reeder-Esparza</h2></a>
-		{% if post.id != 7 and post.post_type != 'post' %}<h1 class="emoji color--white">{{post.title}}</h1>{% endif %}
+		{% if post.id != 7 and post.post_type != 'post' %}<h1 class="emoji color--white">{% if post.title %}{{post.title}}{% else %}{{wp_title}}{% endif %}</h1>{% endif %}
 	</div>
 </header>

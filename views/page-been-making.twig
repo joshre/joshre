@@ -1,9 +1,12 @@
 {% extends "base.twig" %}
 {% block content %}
-	{% for post in posts %}
-		{% include 'components/sections/section--post.twig' %}
-	{% endfor %}
-	{% if pagination %}
+	<section class="max-wrap margin--center justify--between margin--bot-5"><h1>{{title}}</h1>
+		{% if post.content %}<div class="grid--one grid--sm-four-fifths grid--md-three-fourths grid--lg-two-thirds h3">{{post.content}}</div>{% endif %}
+		</section>
+		{% for post in posts %}
+			{% include 'components/sections/section--post.twig' %}
+		{% endfor %}
+		{% if pagination %}
 			{% include 'components/sections/section--archive-pagination.twig' %}
 		{% endif %}
-{% endblock %}
+	{% endblock %}
