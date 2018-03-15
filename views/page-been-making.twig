@@ -3,4 +3,7 @@
 	{% for post in posts %}
 		{% include 'components/sections/section--post.twig' %}
 	{% endfor %}
+	{% if pagination %}
+			{% include 'components/sections/section--archive-pagination.twig' %}
+		{% endif %}
 {% endblock %}

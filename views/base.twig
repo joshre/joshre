@@ -5,23 +5,29 @@
 </head>
 {% endblock %}
 <body class="{{body_class}} {{"now"|date("F")|lower}}" data-template="base.twig">
-
-	{% block header %}
-		{# <a class="hdr-logo-link" href="/" rel="home">{{site.name}}</a> #}
-		{% include 'components/header.twig' %}
-	{% endblock %}
-
+{% block header %}
+	{# <a class="hdr-logo-link" href="/" rel="home">{{site.name}}</a> #}
+	{% include 'components/header.twig' %}
+{% endblock %}
 <main role="main" class="content-wrapper">
-	{% if title %}<h1>{{title}}</h1>{% endif %}
-		{% block content %}
-			Sorry, no content
-		{% endblock %}
 
+	
+	{% if category.title %}
+		<section class="max-wrap margin--center justify--between margin--bot-5"><h1>All the posts in "{{title}}"</h1>
+			{% if category.description %}<div class="grid--one grid--sm-four-fifths grid--md-three-fourths grid--lg-two-thirds h3">{{category.description}}</div>{% endif %}</section>
+	{% elseif title %}
+		<h1>{{title}}</h1>
+	{% endif %}
+	
+	{% block content %}
+		Sorry, no content
+	{% endblock %}
+	{% if pagination %}
+		{% include 'components/sections/section--archive-pagination.twig' %}
+	{% endif %}
 </main>
 {% block footer %}
-
-		{% include 'footer.twig' %}
-
+	{% include 'footer.twig' %}
 	{{ function('wp_footer') }}
 {% endblock %}
 </body>

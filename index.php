@@ -18,8 +18,16 @@ if ( ! class_exists( 'Timber' ) ) {
 	return;
 }
 $context = Timber::get_context();
+$context['pagination'] = Timber::get_pagination();
+$numberOfPosts         = get_option('posts_per_page');
+
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
+$offset = $paged * floatval($numberOfPosts) - floatval($numberOfPosts);
+
 $context['posts'] = Timber::get_posts();
-$context['foo'] = 'bar';
+
+
 $templates = array( 'index.twig' );
 if ( is_home() ) {
 	array_unshift( $templates, 'home.twig' );

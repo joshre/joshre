@@ -1,0 +1,15 @@
+<section class="section--archive-pagination grid--one text--center spacing--vert-1">
+	{% if pagination.prev != null %}
+		<a href="{{pagination.prev.link}}" class="{{pagination.prev.class}}"><i class="icon-post-toggle left" data-grunticon-embed></i></a>
+	{% endif %}
+	{% for page in pagination.pages %}
+		{% if page.current == false %}
+			<a href="{{page.link}}" class="{{page.class}}"><span class="text--uppercase font--smaller font--bold  color--gray-font">{{page.title}}</span></a>
+		{% else %}
+			<span class="text--uppercase font--smaller font--bold  color--black-text {{page.class}}">{{page.title}}</span>
+		{% endif %}
+	{% endfor %}
+	{% if pagination.next != null %}
+		<a href="{{pagination.next.link}}" class="{{pagination.next.class}}"><i class="icon-post-toggle right" data-grunticon-embed></i></a>
+	{% endif %}
+</section>

@@ -24,8 +24,15 @@
 $context         = Timber::get_context();
 $post            = new TimberPost();
 $context['post'] = $post;
-$context['posts'] =  getCustomPosts('post', -1, null, 'date', null, null);
+// $context['posts'] =  getCustomPosts('post', -1, null, 'date', null, null);
+$context['pagination'] = Timber::get_pagination();
+$numberOfPosts         = get_option('posts_per_page');
 
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
+$offset = $paged * floatval($numberOfPosts) - floatval($numberOfPosts);
+
+$context['posts'] = Timber::get_posts();
 
 if (is_page('home')) {
     $context['home'] = prepareHomepage();
