@@ -264,3 +264,10 @@ ul {
     background-clip: none !important;
     -webkit-text-fill-color: white !important;
 }
+
+ol {
+    list-style: decimal;
+    list-style-position: outside;
+    font-size: .95em;
+    margin-left: 1em;
+}
