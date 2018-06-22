@@ -1,4 +1,4 @@
-$months: (feb: #42A64E, march: #F66D6B, april: #3CDBC0, may: #7b8994, june: #E8EDF2, july: #233e98, october: #E8EDF2);
+$months: (feb: #42A64E, march: #F66D6B, april: #3CDBC0, may: #7b8994, june: #233e98, july: #233e98, october: #E8EDF2);
 
 @each $name, $value in $months {
     .#{$name} {
