@@ -24,15 +24,15 @@
     "grunt": "*",
     "grunt-contrib-clean": "*",
     "grunt-contrib-copy": "*",
-    "grunt-contrib-sass": "*",
-    "grunt-contrib-uglify": "^3.2.1",
+    "grunt-contrib-uglify": "*",
     "grunt-contrib-watch": "*",
     "grunt-cssnano": "*",
     "grunt-grunticon": "*",
     "grunt-notify": "*",
-    "grunt-postcss": "^0.9.0",
-    "grunt-svgmin": "^5.0.0",
-    "postcss-convert-values": "^2.3.4",
-    "postcss-font-magician": "^2.1.0"
+    "grunt-postcss": "*",
+    "grunt-sass": "*",
+    "grunt-svgmin": "*",
+    "postcss-convert-values": "*",
+    "postcss-font-magician": "*"
   }
 }

@@ -22,7 +22,7 @@ module.exports = function(grunt) {
         sass: {
             dist: {
                 options: {
-                    style: 'compressed',
+                    style: 'nested',
                     sourcemap: 'none'
                 },
                 files: {
@@ -48,43 +48,18 @@ module.exports = function(grunt) {
                 }
             }
         },
-        postcss: {
-            options: {
-                processors: [
-                    require('postcss-font-magician')({
-                        custom: {
-                            'Affogato': {
-                                variants: {
-                                    normal: {
-                                        400: {
-                                            url: {
-                                                woff2: 'fonts/affogato.woff2',
-                                                woff: 'fonts/affogato.woff',
-                                                eot: 'fonts/affogato.eot',
-                                                svg: 'fonts/affogato.svg'
-                                            }
-                                        },
-                                        600: {
-                                            url: {
-                                                woff2: 'fonts/affogato-bold.woff2',
-                                                woff: 'fonts/affogato-bold.woff',
-                                                eot: 'fonts/affogato-bold.eot',
-                                                svg: 'fonts/affogato-bold.svg'
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    })
-                ]
-            },
-               dist: {
-                files: {
-                    '<%= conf.app %>/main.min.css': '<%= conf.app %>/main.min.css'
-                }
-            }
-        },
+        // postcss: {
+        //     options: {
+        //         processors: [
+        //             require('postcss-font-magician')({
+        //                 hosted: '../fonts/'
+        //             })
+        //         ]
+        //     },
+        //     dist: {
+        //         src: '<%= conf.app %>/main.min.css'
+        //     }
+        // },
         watch: {
             twig: {
                 files: '**/*.twig',
@@ -102,18 +77,6 @@ module.exports = function(grunt) {
                 options: {
                     livereload: true,
                 },
-            },
-            cssnano: {
-                files: ["<%= conf.sass %>"],
-                tasks: ["cssnano", "postcss"]
-            },
-            svgmin: {
-                files: ["<%= conf.iconts %>/*.svg"],
-                tasks: ["svgmin:dist"]
-            },
-            grunticon: {
-                files: ["<%= conf.icons %>/optimized/*.svg"],
-                tasks: ["grunticon:myIcons", "copy"]
             }
         },
         svgmin: {
@@ -183,7 +146,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-notify');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-svgmin');
