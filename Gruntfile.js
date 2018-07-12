@@ -48,18 +48,20 @@ module.exports = function(grunt) {
                 }
             }
         },
-        // postcss: {
-        //     options: {
-        //         processors: [
-        //             require('postcss-font-magician')({
-        //                 hosted: '../fonts/'
-        //             })
-        //         ]
-        //     },
-        //     dist: {
-        //         src: '<%= conf.app %>/main.min.css'
-        //     }
-        // },
+        postcss: {
+            options: {
+                processors: [
+                    require('postcss-font-magician')({
+                        hosted: ['app/fonts']
+                    })
+                ]
+            },
+            dist: {
+                files: {
+                    '<%= conf.app %>/main.min.css': '<%= conf.app %>/main.min.css'
+                }
+            }
+        },
         watch: {
             twig: {
                 files: '**/*.twig',
@@ -154,6 +156,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.registerTask('default', ['watch', 'notify_hooks']);
     grunt.registerTask('icons', ['svgmin', 'grunticon', 'clean', 'copy']);
-    grunt.registerTask('server', ['uglify', 'sass', 'cssnano', 'svgmin', 'grunticon', 'clean', 'copy']);
+    grunt.registerTask('server', ['uglify', 'sass', 'cssnano', 'postcss', 'svgmin', 'grunticon', 'clean', 'copy']);
     grunt.task.run('notify_hooks');
 }
