@@ -31,5 +31,9 @@
 	{{ function('wp_footer') }}
 {% endblock %}
 {% include 'components/analytics.twig' %}
+
+{% if 'test' in site.url %}
+	<p>url contains "test"</p>
+{% endif %}
 </body>
 </html>

@@ -1,38 +1,40 @@
 {
-  "name": "buscemi",
-  "version": "1.0.0",
-  "description": "![Buscemi](buscemi.png)",
-  "main": "Gruntfile.js",
-  "directories": {
-    "test": "tests"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://joshre@github.com/joshre/buscemi.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/joshre/buscemi/issues"
-  },
-  "homepage": "https://github.com/joshre/buscemi#readme",
-  "devDependencies": {
-    "cssnano": "*",
-    "grunt": "*",
-    "grunt-contrib-clean": "*",
-    "grunt-contrib-copy": "*",
-    "grunt-contrib-uglify": "*",
-    "grunt-contrib-watch": "*",
-    "grunt-cssnano": "*",
-    "grunt-grunticon": "*",
-    "grunt-notify": "*",
-    "grunt-postcss": "*",
-    "grunt-sass": "*",
-    "grunt-svgmin": "*",
-    "postcss-convert-values": "*",
-    "postcss-font-magician": "^2.2.1"
-  }
+    "name": "buscemi",
+    "version": "1.0.0",
+    "description": "![Buscemi](buscemi.png)",
+    "main": "Gruntfile.js",
+    "directories": {
+        "test": "tests"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://joshre@github.com/joshre/buscemi.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/joshre/buscemi/issues"
+    },
+    "homepage": "https://github.com/joshre/buscemi#readme",
+    "devDependencies": {
+        "cssnano": "*",
+        "fibers": "*",
+        "grunt": "*",
+        "grunt-contrib-clean": "*",
+        "grunt-contrib-copy": "*",
+        "grunt-contrib-uglify": "*",
+        "grunt-contrib-watch": "*",
+        "grunt-cssnano": "*",
+        "grunt-grunticon": "*",
+        "grunt-notify": "*",
+        "grunt-postcss": "*",
+        "grunt-sass": "*",
+        "grunt-svgmin": "*",
+        "node-sass": "*",
+        "postcss-convert-values": "*",
+        "postcss-font-magician": "*"
+    }
 }
