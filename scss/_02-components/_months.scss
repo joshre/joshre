@@ -1,5 +1,5 @@
-// // $months: (feb: #42A64E, march: #42A64E, april: #42A64E, may: #42A64E, june: #42A64E, july: #42A64E, october: #42A64E);
-// $months: (feb: #42A64E, march: #F66D6B, april: #3CDBC0, may: #7b8994, june: #7b8994, july: #7b8994, october: #F66D6B);
+// // $months: (feb: #315345, march: #315345, april: #315345, may: #315345, june: #315345, july: #315345, october: #315345);
+// $months: (feb: #315345, march: #F66D6B, april: #3CDBC0, may: #7b8994, june: #7b8994, july: #7b8994, october: #F66D6B);
 // @each $name, $value in $months {
 //     .#{$name} {
 //         .lead-paragraph, h1, b {
@@ -40,22 +40,22 @@
 
 
 .lead-paragraph, h1, b {
-            // @include gradient-text(#42A64E, darken(#42A64E, 40%));
-            color: #42A64E;
+            // @include gradient-text(#315345, darken(#315345, 40%));
+            color: #315345;
         }
 
         .button {
-            background-color: #42A64E;
+            background-color: #315345;
             color: white;
 
             &.grad {
                 background-color: none;
-                background-image: linear-gradient(#42A64E, darken(#42A64E, 4%));
+                background-image: linear-gradient(#315345, darken(#315345, 4%));
             }
         }
 
         a {
-            color: #42A64E;
+            color: #315345;
             text-decoration: none;
             border-bottom: 1px solid transparent;
             transition: border 0.2s $base-animation;
@@ -66,9 +66,9 @@
         }
 
         .bigfoot-footnote__button {
-            background-color: rgba(#42A64E, $button-standard-opacity);
+            background-color: rgba(#315345, $button-standard-opacity);
         }
 
         .site-header {
-            background-image: linear-gradient(#42A64E, darken(#42A64E, 4%));
+            background-image: linear-gradient(#315345, darken(#315345, 4%));
         }
