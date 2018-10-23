@@ -1,5 +1,5 @@
-// // $months: (feb: #315345, march: #315345, april: #315345, may: #315345, june: #315345, july: #315345, october: #315345);
-// $months: (feb: #315345, march: #F66D6B, april: #3CDBC0, may: #7b8994, june: #7b8994, july: #7b8994, october: #F66D6B);
+// // $months: (feb: $base-color, march: $base-color, april: $base-color, may: $base-color, june: $base-color, july: $base-color, october: $base-color);
+// $months: (feb: $base-color, march: #F66D6B, april: #3CDBC0, may: #7b8994, june: #7b8994, july: #7b8994, october: #F66D6B);
 // @each $name, $value in $months {
 //     .#{$name} {
 //         .lead-paragraph, h1, b {
@@ -38,37 +38,49 @@
 //     }
 // }
 
-
 .lead-paragraph, h1, b {
-            // @include gradient-text(#315345, darken(#315345, 40%));
-            color: #315345;
-        }
+    // @include gradient-text($base-color, darken($base-color, 40%));
+    color: $base-color;
+}
 
-        .button {
-            background-color: #315345;
-            color: white;
+.button {
+    background-color: $base-color;
+    color: white;
 
-            &.grad {
-                background-color: none;
-                background-image: linear-gradient(#315345, darken(#315345, 4%));
-            }
-        }
+    &.grad {
+        background-color: none;
+        background-image: linear-gradient($base-color, darken($base-color, 4%));
+    }
+}
 
-        a {
-            color: #315345;
-            text-decoration: none;
-            border-bottom: 1px solid transparent;
-            transition: border 0.2s $base-animation;
+a {
+    color: lighten($base-color, 5%);
+    text-decoration-color: transparent;
 
-            &:hover {
-                border-bottom: 1px solid;
-            }
-        }
+    // text-decoration: none;
+    // border-bottom: 1px solid transparent;
+    transition: text-decoration-color 0.2s $base-animation;
 
-        .bigfoot-footnote__button {
-            background-color: rgba(#315345, $button-standard-opacity);
-        }
+    &:hover {
+        text-decoration-color: lighten($base-color, 5%);
+        transition: text-decoration-color 0.2s $base-animation;
+    }
 
-        .site-header {
-            background-image: linear-gradient(#315345, darken(#315345, 4%));
-        }
+    @include media($max-sm) {
+        text-decoration: underline;
+    }
+}
+
+header {
+    a {
+        text-decoration: none !important;
+    }
+}
+
+.bigfoot-footnote__button {
+    background-color: rgba($base-color, $button-standard-opacity);
+}
+
+.site-header {
+    background-image: linear-gradient($base-color, darken($base-color, 4%));
+}

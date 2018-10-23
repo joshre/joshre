@@ -1,14 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Overpass:300,400');
 
 
-$default-font: 	'Source Sans Pro', sans-serif;
+
+$default-font: 	'Overpass', sans-serif;
 $bold-font: 	$default-font;
+
 
 $base-serif-font:$default-font;
 $base-sans-font:$default-font;
 $heading-font-family:$default-font;
 
 $heading-font-weight: 300;
-$base-font-weight: 400;
+$base-font-weight: 300;
 
 $max-width: (
 	xs: 480px,
@@ -20,12 +23,12 @@ $max-width: (
 );
 
 
+$base-color: 				#315345;
 
 $base-font-color:			$black;
 $heading-font-color: 		$black;
 $base-font-size:			1rem;
 $base-padding:				1em;
-
 
 
 $base-border-radius: 		8px;
@@ -47,15 +50,27 @@ $grid:1;
 $spacing-unit: (1em * $grid);
 $small-spacing: ($spacing-unit / 2);
 
-//
-// Media Queries & Breakpoints
-// 
+$max-width: (
+	xs: 	480px,
+	xsm: 	640px,
+	sm: 	768px,
+	smd: 	834px,
+	md: 	992px,
+	mdl: 	1110px,
+	lg: 	1200px,
+	xl: 	1640px
+);
 
 // Extra small screen / phone
 $screen-xs:                  map-get($max-width, xs) !default;
 
+$screen-xsm:                 map-get($max-width, xsm) !default;
+
 // Small screen / tablet
 $screen-sm:                  map-get($max-width, sm) !default;
+
+// Small screen / tablet
+$screen-smd:                 map-get($max-width, smd) !default;
 
 // Medium screen / desktop
 $screen-md:                  map-get($max-width, md) !default;
@@ -70,15 +85,17 @@ $screen-xl:                  map-get($max-width, xl) !default;
 
 // So media queries don't overlap when required, provide a maximum
 $screen-xs-max:              ($screen-xs - 1) !default;
+$screen-xsm-max:             ($screen-xsm - 1) !default;
 $screen-sm-max:              ($screen-sm - 1) !default;
+$screen-smd-max:             ($screen-smd - 1) !default;
 $screen-md-max:              ($screen-md - 1) !default;
-$screen-mdl-max:              ($screen-mdl + 1) !default;
+$screen-mdl-max:             ($screen-mdl - 1) !default;
 $screen-lg-max:              ($screen-lg - 1) !default;
-$screen-xl-max:              ($screen-xl - 1) !default;
 
-$max-xs:  new-breakpoint(max-width $screen-xs-max 12);
-$max-sm: new-breakpoint(max-width $screen-sm-max 12);
-$max-md:  new-breakpoint(max-width $screen-md-max  6);
-$max-mdl:  new-breakpoint(max-width $screen-mdl-max  6);
-$max-lg:  new-breakpoint(max-width $screen-lg-max  6);
-$max-xl:  new-breakpoint(max-width $screen-xl-max  6);
+$max-xs:  	new-breakpoint(max-width $screen-xs-max 12);
+$max-xsm: 	new-breakpoint(max-width $screen-xsm-max 12);
+$max-sm: 	new-breakpoint(max-width $screen-sm-max 12);
+$max-smd: 	new-breakpoint(max-width $screen-smd-max 12);
+$max-md:  	new-breakpoint(max-width $screen-md-max  6);
+$max-mdl:  	new-breakpoint(max-width $screen-mdl-max  6);
+$max-lg:  	new-breakpoint(max-width $screen-lg-max  6);

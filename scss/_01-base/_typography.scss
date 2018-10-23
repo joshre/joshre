@@ -1,16 +1,21 @@
 body {
     font-family: $base-sans-font;
     line-height: 1.6;
-    font-size: $base-font-size;
+    font-size: calc( 11px + 8 * ((100vw - 500px) / 1500));
 
-    @include media($screen-sm-max) {
-        // font-size: $base-font-size * 0.9;
+    @include media($max-mdl) {
+        font-size: calc( 13px + 8 * ((100vw - 500px) / 1500));
     }
 
 
-    // -webkit-font-smoothing: antialiased;
+    @include media($max-sm) {
+        font-size: calc( 16px + 8 * ((100vw - 500px) / 1500));
+    }
+
+
     font-weight: $base-font-weight;
     color: $base-font-color;
+    font-kerning: normal;
 }
 
 %headings {
@@ -61,7 +66,6 @@ h1, .h1 {
 h2, .h2 {
     font-size: 1.5rem;
     font-weight: 400;
-
 }
 
 h3, .h3 {
@@ -150,7 +154,6 @@ em, i, address, blockquote, cite, dfn, var {
 
 strong, b {
     font-weight: 400;
-
 }
 
 // `margin-bottom` to maintain vertical rhythm
