@@ -56,3 +56,9 @@
     float: left;
     width: 100%;
 }
+
+.post-type-post {
+    .wp-caption, img, figure {
+        max-width: 100%;
+    }
+}

@@ -82,3 +82,62 @@ if (function_exists('acf_add_options_page')) {
 
 require_once 'functions--custom-fields.php';
 require_once 'functions--custom-posts.php';
+function CallAPI($method, $url, $data = false)
+{
+    $curl = curl_init();
+
+    switch ($method) {
+        case "POST":
+            curl_setopt($curl, CURLOPT_POST, 1);
+
+            if ($data) {
+                curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+            }
+
+            break;
+        case "PUT":
+            curl_setopt($curl, CURLOPT_PUT, 1);
+            break;
+        default:
+            if ($data) {
+                $url = sprintf("%s?%s", $url, http_build_query($data));
+            }
+
+    }
+
+    // Optional Authentication:
+    curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+    curl_setopt($curl, CURLOPT_USERPWD, "username:password");
+
+    curl_setopt($curl, CURLOPT_URL, $url);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+
+    $result = curl_exec($curl);
+
+    curl_close($curl);
+
+    return $result;
+}
+function saveWeatherData()
+{
+
+    $response = array();
+
+    $hour = 0;
+
+    $today     = strtotime($hour . ':00:00');
+    $yesterday = strtotime('-1 day', strtotime('-1 day', $today));
+
+    $fileDate       = date("Y-m-d", $yesterday);
+    $dayOpen        = $yesterday;
+    $weatherDataURL = "https://api.darksky.net/forecast/8b49204b4878fe62a139e636ce5e45a5/38.546906, -121.474489," . $dayOpen;
+    
+    $weatherDataResponse = CallAPI('GET',$weatherDataURL,null);
+print_r(json_decode($weatherDataResponse,true));
+    // file_put_contents(get_template_directory() . "/library/weather/weather-" . $fileDate . ".json", $weatherDataResponse);
+
+    // fwrite($fp, json_encode($response));
+    // fclose($fp);
+}
+
+saveWeatherData();

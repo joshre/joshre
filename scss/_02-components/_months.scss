@@ -84,3 +84,34 @@ header {
 .site-header {
     background-image: linear-gradient($base-color, darken($base-color, 4%));
 }
+.button{
+    text-decoration: none !important;
+}
+
+body {
+    @media (prefers-color-scheme: dark) {
+        .site-header {
+            background: desaturate(lighten($darktheme, 5%), 50%);
+            background-image: none;
+        }
+
+        background-color: desaturate(lighten($darktheme, 10%), 50%);
+
+        .bg--white {
+            background-color: $darktheme;
+            color: $white;
+            border-color: desaturate(lighten($darktheme, 5%), 50%);
+        }
+
+        h1, h2, h3, h4, h5, h6, .lead-paragraph {
+            color: $white;
+        }
+
+        a {
+            color: $white;
+        }
+        .color--text{
+         color: $white;   
+        }
+    }
+}
