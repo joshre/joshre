@@ -1,4 +1,4 @@
-t<?php
+<?php
 
 // Adding documentation to the dash
 function bc_dashboard_widget_function()
