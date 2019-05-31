@@ -36,18 +36,17 @@ function jquery_enqueue()
 {
     wp_dequeue_script('jquery');
     wp_deregister_script('jquery');
-    wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js", false, null);
+    wp_register_script('jquery',  get_template_directory_uri() . '/app/jquery-1.9.1.min.js', false, null);
 }
 
 function localInstall()
 {
-    if ('127.0.0.1' == $_SERVER["REMOTE_ADDR"]) {
-        $res = false;
-    } else {
 
-        $res = true;
+    if (strpos($_SERVER["HTTP_HOST"], 'test') !== false) {
+        $reloadScript = 'http://localhost:35729/livereload.js';
+        wp_register_script('livereload', $reloadScript, null, false, true);
+        wp_enqueue_script('livereload');
     }
-    return ($res);
 }
 
 // Enqueuing all of our scripts and styles
