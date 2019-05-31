@@ -57,8 +57,6 @@
     width: 100%;
 }
 
-.post-type-post {
-    .wp-caption, img, figure {
-        max-width: 100%;
-    }
+.wp-caption, img {
+    max-width: 100%;
 }
