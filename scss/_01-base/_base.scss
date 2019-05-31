@@ -34,3 +34,7 @@ main.content-wrapper, .block--header-wrap {
         padding-left: 0;
     }
 }
+
+.wp-caption {
+    max-width: 100% !important;
+}
